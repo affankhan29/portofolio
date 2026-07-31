@@ -29,7 +29,7 @@ export function About() {
 
             <p className="mb-6">
               My core passion lies beneath high-level frameworks — in the quiet, disciplined realm of{" "}
-              <strong className="font-semibold text-[var(--color-ink)]">Low-Level Systems Programming</strong>. I delight in understanding how bytes navigate memory, architecting bare-metal 2D C++ engines with SFML, and managing hardware resources without bloated crutches.
+              <strong className="font-semibold text-[var(--color-ink)]">Low-Level Systems &amp; Full-Stack Engineering</strong>. I delight in understanding how bytes navigate memory, architecting bare-metal 2D C++ engines with SFML, and building resilient web applications.
             </p>
 
             <p className="mb-6">
@@ -40,7 +40,7 @@ export function About() {
             <p>
               In the summer of 2026, I completed a two-month tenure as a{" "}
               <strong className="font-semibold text-[var(--color-ink)]">Software Development Engineer Intern</strong> at{" "}
-              <strong className="font-semibold text-[var(--color-ink)]">Deister Software Pakistan</strong>, designing HR relational database schemas and XDBL XML definitions in Informix. Earlier that spring (Mar – May 2026), I spent eight weeks teaching digital literacy to underprivileged children at{" "}
+              <strong className="font-semibold text-[var(--color-ink)]">Deister Software Pakistan</strong>, engineering full-stack enterprise solutions — developing backend services, REST API integrations, and responsive frontend UIs, alongside designing HR relational schemas and XDBL definitions in Informix. Earlier that spring (Mar – May 2026), I spent eight weeks teaching digital literacy to underprivileged children at{" "}
               <strong className="font-semibold text-[var(--color-rust)]">Pehli Kiran School System</strong>.
             </p>
           </div>
