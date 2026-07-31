@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { ResumeModal } from "./ResumeModal";
+import VariableProximity from "@/components/ui/VariableProximity";
 
 const ROLES = [
   "AFFAN KHAN",
@@ -21,6 +22,7 @@ interface HeroProps {
 }
 
 export function Hero({ onOpenResume }: HeroProps) {
+  const heroRef = useRef<HTMLDivElement>(null);
   const [roleIndex, setRoleIndex] = useState(0);
   const [currentText, setCurrentText] = useState("AFFAN KHAN");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -71,7 +73,7 @@ export function Hero({ onOpenResume }: HeroProps) {
 
   return (
     <>
-      <section className="hero" id="home">
+      <section className="hero relative" id="home" ref={heroRef}>
         <p className="sub-title">Computer Science Undergraduate &amp; Systems Developer</p>
 
         <h1 className="main-title font-serif">
@@ -79,9 +81,17 @@ export function Hero({ onOpenResume }: HeroProps) {
           <span className="animate-pulse text-[#C79A3C] font-mono ml-1">_</span>
         </h1>
 
-        <p className="year font-serif italic">
-          Crafting bare-metal C++ engines, relational Informix database architecture, and mathematical algorithms at FAST-NUCES Islamabad.
-        </p>
+        <div className="my-4 cursor-pointer">
+          <VariableProximity
+            label="Crafting bare-metal C++ engines, relational Informix database architecture, and mathematical algorithms at FAST-NUCES Islamabad."
+            className="year font-serif italic block text-base md:text-lg leading-relaxed"
+            fromFontVariationSettings="'wght' 400, 'opsz' 12"
+            toFontVariationSettings="'wght' 900, 'opsz' 40"
+            containerRef={heroRef}
+            radius={140}
+            falloff="linear"
+          />
+        </div>
 
         <div className="hero-buttons">
           <button

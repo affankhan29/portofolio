@@ -9,6 +9,7 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Experience } from "@/components/Experience";
 import { Projects } from "@/components/Projects";
+import ScrollVelocity from "@/components/ui/ScrollVelocity";
 import { Skills } from "@/components/Skills";
 import { Profiles } from "@/components/Profiles";
 import { InteractivePlayground } from "@/components/InteractivePlayground";
@@ -31,6 +32,23 @@ export default function Home() {
         <About />
         <Experience />
         <Projects />
+
+        {/* ScrollVelocity Marquee Banner */}
+        <section className="my-12 overflow-hidden border-y border-[#222220]/15 bg-[#FAF8F3]/80 py-4">
+          <ScrollVelocity
+            texts={[
+              <span key="1" className="custom-scroll-text">
+                Software Engineer <span className="custom-scroll-text-highlight">Informix DB Architect</span> Systems Developer
+              </span>,
+              <span key="2" className="custom-scroll-text">
+                C++ SFML Engine <span className="custom-scroll-text-highlight">Next.js &amp; React</span> Axional Studio XDBL
+              </span>,
+            ]}
+            velocity={80}
+            numCopies={5}
+          />
+        </section>
+
         <Skills />
         <Profiles />
         <InteractivePlayground />
