@@ -28,32 +28,15 @@ export function ThreeBackground() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-    // 4,000 Vivid Dark & Gold Particles floating behind text
     const starsCount = 4000;
     const starsGeometry = new THREE.BufferGeometry();
     const posArray = new Float32Array(starsCount * 3);
     const colorArray = new Float32Array(starsCount * 3);
 
-    const darkCharcoal = new THREE.Color(0x222220); // Dark Charcoal
-    const mustardGold = new THREE.Color(0xc79a3c);  // Mustard Gold
-    const rustAccent = new THREE.Color(0x8c3b2e);   // Rust Accent
-
     for (let i = 0; i < starsCount; i++) {
       posArray[i * 3] = (Math.random() - 0.5) * 110;
       posArray[i * 3 + 1] = (Math.random() - 0.5) * 110;
       posArray[i * 3 + 2] = (Math.random() - 0.5) * 50;
-
-      const rand = Math.random();
-      const mixedColor =
-        rand < 0.6
-          ? darkCharcoal
-          : rand < 0.85
-          ? mustardGold
-          : rustAccent;
-
-      colorArray[i * 3] = mixedColor.r;
-      colorArray[i * 3 + 1] = mixedColor.g;
-      colorArray[i * 3 + 2] = mixedColor.b;
     }
 
     starsGeometry.setAttribute(
@@ -64,6 +47,34 @@ export function ThreeBackground() {
       "color",
       new THREE.BufferAttribute(colorArray, 3)
     );
+
+    const updateParticleColors = () => {
+      const isDark = document.documentElement.classList.contains("dark");
+      const colorAttr = starsGeometry.attributes.color as THREE.BufferAttribute;
+      const colors = colorAttr.array as Float32Array;
+
+      // Light vs Dark particle palettes
+      const primaryColor = isDark ? new THREE.Color(0xF3EFE6) : new THREE.Color(0x222220);
+      const accentColor1 = isDark ? new THREE.Color(0xE5B84F) : new THREE.Color(0xC79A3C);
+      const accentColor2 = isDark ? new THREE.Color(0xE06C53) : new THREE.Color(0x8C3B2E);
+
+      for (let i = 0; i < starsCount; i++) {
+        const rand = Math.random();
+        const mixedColor =
+          rand < 0.6
+            ? primaryColor
+            : rand < 0.85
+            ? accentColor1
+            : accentColor2;
+
+        colors[i * 3] = mixedColor.r;
+        colors[i * 3 + 1] = mixedColor.g;
+        colors[i * 3 + 2] = mixedColor.b;
+      }
+      colorAttr.needsUpdate = true;
+    };
+
+    updateParticleColors();
 
     function createParticleTexture() {
       const textureCanvas = document.createElement("canvas");
@@ -84,9 +95,9 @@ export function ThreeBackground() {
         center,
         radius
       );
-      gradient.addColorStop(0, "rgba(34, 34, 32, 1)");
-      gradient.addColorStop(0.5, "rgba(34, 34, 32, 0.75)");
-      gradient.addColorStop(0.8, "rgba(199, 154, 60, 0.4)");
+      gradient.addColorStop(0, "rgba(255, 255, 255, 1)");
+      gradient.addColorStop(0.5, "rgba(255, 255, 255, 0.75)");
+      gradient.addColorStop(0.8, "rgba(229, 184, 79, 0.4)");
       gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
 
       ctx.beginPath();
@@ -102,7 +113,7 @@ export function ThreeBackground() {
       map: createParticleTexture(),
       vertexColors: true,
       transparent: true,
-      opacity: 0.75,
+      opacity: 0.85,
       sizeAttenuation: true,
       depthWrite: false,
     });
@@ -137,11 +148,11 @@ export function ThreeBackground() {
     };
 
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("themeChange", updateParticleColors);
 
     let animationFrameId: number;
 
     const animate = () => {
-      // Continuous ambient drift when no mouse input (slightly increased)
       targetRotationY += 0.00075;
       targetRotationX += 0.0002;
 
@@ -167,6 +178,7 @@ export function ThreeBackground() {
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("themeChange", updateParticleColors);
       window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(animationFrameId);
       renderer.dispose();
