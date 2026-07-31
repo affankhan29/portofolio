@@ -17,10 +17,9 @@ export function Navbar() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
-    // Check initial theme preference
+    // Default initial theme is always Light Mode unless explicitly saved as 'dark'
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initialTheme = savedTheme === "dark" || (!savedTheme && prefersDark) ? "dark" : "light";
+    const initialTheme = savedTheme === "dark" ? "dark" : "light";
 
     setTheme(initialTheme);
     if (initialTheme === "dark") {
