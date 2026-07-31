@@ -94,12 +94,12 @@ export function Projects() {
                     Live UI
                   </span>
                 </div>
-                {/* Screenshot with Max Height */}
-                <div className="overflow-hidden bg-[#0A0B0E] max-h-[340px] md:max-h-[380px] flex items-center justify-center">
+                {/* Screenshot with Top Anchoring */}
+                <div className="overflow-hidden bg-[#0A0B0E] max-h-[360px] md:max-h-[440px] flex items-start justify-center">
                   <img
                     src="/img/project-affinity.jpg"
                     alt="Affinity AI Chat Clone Interface showing conversational prompt cards and prompt bar"
-                    className="w-full h-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
+                    className="w-full h-auto object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
                   />
                 </div>
                 {/* Caption Bar */}
@@ -154,13 +154,13 @@ export function Projects() {
             </div>
 
             <div className="editorial-main-col w-full">
-              {/* Poster Frame with Max Height */}
+              {/* Poster Frame with Top Anchoring */}
               <div className="group overflow-hidden rounded-xl border border-[#222220]/20 bg-[#1D1B17] shadow-md hover:border-[#C79A3C]/40 transition-all duration-300 mb-5">
-                <div className="overflow-hidden bg-[#1D1B17] max-h-[340px] md:max-h-[380px] flex items-center justify-center">
+                <div className="overflow-hidden bg-[#1D1B17] max-h-[360px] md:max-h-[440px] flex items-start justify-center">
                   <img
                     src="/img/arcade-metalslug.jpg"
                     alt="Metal Slug 2D Arcade Game cover poster showing OOP architecture details and gameplay art"
-                    className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-transform duration-500"
+                    className="w-full h-auto object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
                   />
                 </div>
                 <div className="px-4 py-2 bg-[#14120E] border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-[#C79A3C]">
@@ -215,13 +215,13 @@ export function Projects() {
             </div>
 
             <div className="editorial-main-col w-full">
-              {/* Poster Frame with Max Height */}
+              {/* Poster Frame with Top Anchoring */}
               <div className="group overflow-hidden rounded-xl border border-[#222220]/20 bg-[#0B172A] shadow-md hover:border-[#C79A3C]/40 transition-all duration-300 mb-5">
-                <div className="overflow-hidden bg-[#0B172A] max-h-[340px] md:max-h-[380px] flex items-center justify-center">
+                <div className="overflow-hidden bg-[#0B172A] max-h-[360px] md:max-h-[440px] flex items-start justify-center">
                   <img
                     src="/img/arcade-tumblepop.jpg"
                     alt="TumblePop 2D Arcade Game cover poster showing gameplay screenshot and feature matrix"
-                    className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-transform duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
                   />
                 </div>
                 <div className="px-4 py-2 bg-[#070E1A] border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-[#C79A3C]">
