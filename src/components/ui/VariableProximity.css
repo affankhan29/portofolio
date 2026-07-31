@@ -3,6 +3,11 @@
 .variable-proximity {
   font-family: 'Roboto Flex', var(--font-sans, system-ui, sans-serif);
   letter-spacing: -0.01em;
+  display: inline-block;
+}
+
+.variable-proximity span {
+  vertical-align: baseline;
 }
 
 .sr-only {

@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { ResumeModal } from "./ResumeModal";
+import VariableProximity from "@/components/ui/VariableProximity";
 
 const ROLES = [
   "AFFAN KHAN",
@@ -21,6 +22,7 @@ interface HeroProps {
 }
 
 export function Hero({ onOpenResume }: HeroProps) {
+  const heroRef = useRef<HTMLDivElement>(null);
   const [roleIndex, setRoleIndex] = useState(0);
   const [currentText, setCurrentText] = useState("AFFAN KHAN");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -71,11 +73,18 @@ export function Hero({ onOpenResume }: HeroProps) {
 
   return (
     <>
-      <section className="hero" id="home">
+      <section className="hero relative" id="home" ref={heroRef}>
         <p className="sub-title">Computer Science Undergraduate &amp; Systems Developer</p>
 
-        <h1 className="main-title font-serif">
-          <span>{currentText}</span>
+        <h1 className="main-title font-serif flex items-center flex-wrap">
+          <VariableProximity
+            label={currentText}
+            fromFontVariationSettings="'wght' 400, 'opsz' 14"
+            toFontVariationSettings="'wght' 1000, 'opsz' 40"
+            containerRef={heroRef}
+            radius={160}
+            falloff="linear"
+          />
           <span className="animate-pulse text-[#C79A3C] font-mono ml-1">_</span>
         </h1>
 
