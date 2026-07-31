@@ -11,6 +11,7 @@ import { Experience } from "@/components/Experience";
 import { Projects } from "@/components/Projects";
 import { Skills } from "@/components/Skills";
 import { Profiles } from "@/components/Profiles";
+import { InteractivePlayground } from "@/components/InteractivePlayground";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { ResumeModal } from "@/components/ResumeModal";
@@ -32,6 +33,7 @@ export default function Home() {
         <Projects />
         <Skills />
         <Profiles />
+        <InteractivePlayground />
         <Contact />
       </main>
 
