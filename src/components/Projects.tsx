@@ -14,7 +14,7 @@ export function Projects() {
       >
         <span className="editorial-eyebrow">03 — Selected Works</span>
         <h2 className="section-title mb-12">
-          Featured <span className="font-serif italic font-normal text-[#C79A3C]">Engineering Projects</span>
+          Featured <span className="font-serif italic font-normal text-[var(--color-mustard)]">Engineering Projects</span>
         </h2>
 
         <div className="editorial-list space-y-16">
