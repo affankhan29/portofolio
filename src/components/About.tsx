@@ -13,7 +13,7 @@ export function About() {
       >
         <span className="editorial-eyebrow">01 — Profile &amp; Philosophy</span>
         <h2 className="section-title mb-12">
-          The Artisan Behind <span className="font-serif italic font-normal text-[#C79A3C]">The Code</span>
+          The Artisan Behind <span className="font-serif italic font-normal text-[var(--color-mustard)]">The Code</span>
         </h2>
 
         <div className="about-grid">
@@ -24,24 +24,24 @@ export function About() {
           <div className="about-body">
             <p className="mb-6">
               Greetings. I am an aspiring computer scientist and craftsman of code, currently pursuing my degree at{" "}
-              <strong className="font-semibold text-[#2B2B28]">FAST-NUCES Islamabad</strong> with a cumulative GPA of <strong className="font-semibold text-[#8C3B2E]">3.51 / 4.0</strong>.
+              <strong className="font-semibold text-[var(--color-ink)]">FAST-NUCES Islamabad</strong> with a cumulative GPA of <strong className="font-semibold text-[var(--color-rust)]">3.51 / 4.0</strong>.
             </p>
 
             <p className="mb-6">
               My core passion lies beneath high-level frameworks — in the quiet, disciplined realm of{" "}
-              <strong className="font-semibold text-[#2B2B28]">Low-Level Systems Programming</strong>. I delight in understanding how bytes navigate memory, architecting bare-metal 2D C++ engines with SFML, and managing hardware resources without bloated crutches.
+              <strong className="font-semibold text-[var(--color-ink)]">Low-Level Systems Programming</strong>. I delight in understanding how bytes navigate memory, architecting bare-metal 2D C++ engines with SFML, and managing hardware resources without bloated crutches.
             </p>
 
             <p className="mb-6">
               Presently, I am deeply engrossed in mastering{" "}
-              <strong className="font-semibold text-[#C79A3C]">Data Structures &amp; Algorithms (DSA)</strong> — sharpening my problem-solving tools to forge solutions that are mathematically optimal, memory-efficient, and structurally elegant.
+              <strong className="font-semibold text-[var(--color-mustard)]">Data Structures &amp; Algorithms (DSA)</strong> — sharpening my problem-solving tools to forge solutions that are mathematically optimal, memory-efficient, and structurally elegant.
             </p>
 
             <p>
               In the summer of 2026, I completed a two-month tenure as a{" "}
-              <strong className="font-semibold text-[#2B2B28]">Software Development Engineer Intern</strong> at{" "}
-              <strong className="font-semibold text-[#2B2B28]">Deister Software Pakistan</strong>, designing HR relational database schemas and XDBL XML definitions in Informix. Earlier that spring (Mar – May 2026), I spent eight weeks teaching digital literacy to underprivileged children at{" "}
-              <strong className="font-semibold text-[#8C3B2E]">Pehli Kiran School System</strong>.
+              <strong className="font-semibold text-[var(--color-ink)]">Software Development Engineer Intern</strong> at{" "}
+              <strong className="font-semibold text-[var(--color-ink)]">Deister Software Pakistan</strong>, designing HR relational database schemas and XDBL XML definitions in Informix. Earlier that spring (Mar – May 2026), I spent eight weeks teaching digital literacy to underprivileged children at{" "}
+              <strong className="font-semibold text-[var(--color-rust)]">Pehli Kiran School System</strong>.
             </p>
           </div>
         </div>

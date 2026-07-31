@@ -13,7 +13,7 @@ export function Experience() {
       >
         <span className="editorial-eyebrow">02 — Professional Experience</span>
         <h2 className="section-title mb-12">
-          Industry &amp; <span className="font-serif italic font-normal text-[#C79A3C]">Community Work</span>
+          Industry &amp; <span className="font-serif italic font-normal text-[var(--color-mustard)]">Community Work</span>
         </h2>
 
         <div className="editorial-list">

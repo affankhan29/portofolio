@@ -76,7 +76,7 @@ export function Hero({ onOpenResume }: HeroProps) {
 
         <h1 className="main-title font-serif">
           <span>{currentText}</span>
-          <span className="animate-pulse text-[#C79A3C] font-mono ml-1">_</span>
+          <span className="animate-pulse text-[var(--color-mustard)] font-mono ml-1">_</span>
         </h1>
 
         <p className="year font-serif italic">
