@@ -59,14 +59,22 @@ export function Projects() {
                 <span className="editorial-tech-tag"># WhatsApp Business API</span>
               </div>
 
-              <div className="mt-4">
+              <div className="mt-4 flex items-center gap-4">
                 <a
-                  href="https://github.com/affankhan29"
+                  href="https://affankhan29.github.io/dhoom-dhaam-party-co/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="editorial-link"
                 >
-                  View GitHub repository ↗
+                  View live website ↗
+                </a>
+                <a
+                  href="https://github.com/affankhan29/dhoom-dhaam-party-co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="editorial-link text-xs text-[#222220]/60 hover:text-[#C79A3C]"
+                >
+                  GitHub repo ↗
                 </a>
               </div>
             </div>

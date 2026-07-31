@@ -21,21 +21,21 @@ export const CardContainer = ({
   className?: string;
   containerClassName?: string;
 }) => {
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMouseEntered, setIsMouseEntered] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return;
+    if (!wrapperRef.current || !containerRef.current) return;
     const { left, top, width, height } =
-      containerRef.current.getBoundingClientRect();
-    const x = (e.clientX - left - width / 2) / 25;
-    const y = (e.clientY - top - height / 2) / 25;
+      wrapperRef.current.getBoundingClientRect();
+    const x = (e.clientX - left - width / 2) / 35;
+    const y = (e.clientY - top - height / 2) / 35;
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
   };
 
   const handleMouseEnter = () => {
     setIsMouseEntered(true);
-    if (!containerRef.current) return;
   };
 
   const handleMouseLeave = () => {
@@ -47,14 +47,15 @@ export const CardContainer = ({
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
+        ref={wrapperRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
         className={`py-2 flex items-center justify-center [perspective:1000px] ${containerClassName}`}
       >
         <div
           ref={containerRef}
-          onMouseEnter={handleMouseEnter}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          className={`flex items-center justify-center relative [transform-style:preserve-3d] transition-transform duration-200 ease-out ${className}`}
+          className={`flex items-center justify-center relative [transform-style:preserve-3d] transition-transform duration-300 ease-out will-change-transform ${className}`}
         >
           {children}
         </div>
