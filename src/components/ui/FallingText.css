@@ -6,21 +6,22 @@
   cursor: pointer;
   text-align: center;
   padding: 2.5rem 1.5rem;
-  background: rgba(245, 242, 235, 0.6);
-  border: 1px dashed rgba(34, 34, 32, 0.2);
-  border-radius: 1rem;
-  transition: border-color 0.3s ease;
+  background: var(--color-card-bg);
+  border: 1px dashed var(--color-hairline);
+  border-radius: 2px;
+  backdrop-filter: blur(6px);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .falling-text-container:hover {
-  border-color: rgba(199, 154, 60, 0.5);
+  border-color: var(--color-mustard);
 }
 
 .falling-text-target {
   display: inline-block;
   max-width: 800px;
-  font-family: var(--font-sans, system-ui, sans-serif);
-  color: #222220;
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  color: var(--color-ink);
 }
 
 .word {
@@ -28,13 +29,14 @@
   margin: 0 4px;
   user-select: none;
   font-weight: 500;
+  color: var(--color-ink);
   transition: color 0.2s ease;
 }
 
 .highlighted {
-  color: #C79A3C;
+  color: var(--color-mustard);
   font-weight: 700;
-  font-family: var(--font-serif, Georgia, serif);
+  font-family: var(--font-serif, 'Fraunces', serif);
   font-style: italic;
 }
 
