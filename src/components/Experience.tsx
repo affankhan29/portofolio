@@ -37,14 +37,16 @@ export function Experience() {
               <p className="editorial-subtitle">Software Development Engineer Intern</p>
               
               <p className="editorial-description">
-                Designed and developed comprehensive HR database schemas in Informix using Axional/Deister Studio covering departments, employees, payroll, job postings, and applicants. Engineered schema definitions using the proprietary XDBL XML-based format, establishing relational integrity, foreign keys, and CLOB/BLOB handling.
+                Engineered full-stack enterprise modules within Axional/Deister Studio. Built robust backend business logic, integrated REST API calls, constructed interactive frontend UIs, and designed comprehensive HR relational database schemas in Informix (covering departments, employees, payroll, job postings, and applicants) using proprietary XDBL XML definitions with strict foreign key and CLOB/BLOB handling.
               </p>
 
               <div className="editorial-tech-stack">
+                <span className="editorial-tech-tag"># Full-Stack Engineering</span>
+                <span className="editorial-tech-tag"># Backend &amp; APIs</span>
+                <span className="editorial-tech-tag"># Frontend UI</span>
                 <span className="editorial-tech-tag"># Informix DB</span>
-                <span className="editorial-tech-tag"># XDBL XML Format</span>
+                <span className="editorial-tech-tag"># XDBL XML</span>
                 <span className="editorial-tech-tag"># Axional Studio</span>
-                <span className="editorial-tech-tag"># Relational Architecture</span>
               </div>
             </div>
           </div>
