@@ -1,21 +1,23 @@
 .parallax {
   position: relative;
   overflow: hidden;
-  padding: 1.5rem 0;
-  background: rgba(34, 34, 32, 0.03);
-  border-top: 1px solid rgba(34, 34, 32, 0.1);
-  border-bottom: 1px solid rgba(34, 34, 32, 0.1);
+  padding: 1rem 0;
+  background: var(--color-card-bg);
+  border-top: 1px solid var(--color-hairline);
+  border-bottom: 1px solid var(--color-hairline);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .scroller {
   display: flex;
   white-space: nowrap;
   text-align: center;
-  font-family: var(--font-sans, system-ui, sans-serif);
+  font-family: var(--font-sans, 'Inter', sans-serif);
   font-size: 2.25rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #222220;
+  color: var(--color-ink);
+  transition: color 0.3s ease;
 }
 
 .scroller span {
@@ -23,17 +25,19 @@
 }
 
 .custom-scroll-text {
-  color: #222220;
+  color: var(--color-ink);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 1.75rem;
+  transition: color 0.3s ease;
 }
 
 .custom-scroll-text-highlight {
-  color: #C79A3C;
-  font-family: var(--font-serif, Georgia, serif);
+  color: var(--color-mustard);
+  font-family: var(--font-serif, 'Fraunces', serif);
   font-style: italic;
   font-size: 1.75rem;
+  transition: color 0.3s ease;
 }
 
 @media (min-width: 768px) {

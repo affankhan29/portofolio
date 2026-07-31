@@ -34,7 +34,7 @@ export default function Home() {
         <Projects />
 
         {/* ScrollVelocity Marquee Banner */}
-        <section className="my-12 overflow-hidden border-y border-[#222220]/15 bg-[#FAF8F3]/80 py-4">
+        <section className="my-12 overflow-hidden border-y border-[var(--color-hairline)] bg-[var(--color-card-bg)] backdrop-blur-md py-4 transition-colors duration-300">
           <ScrollVelocity
             texts={[
               <span key="1" className="custom-scroll-text">
