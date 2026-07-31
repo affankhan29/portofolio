@@ -26,13 +26,13 @@ export function Projects() {
             </div>
 
             <div className="editorial-main-col w-full">
-              {/* Full-width Cover Art Frame */}
-              <div className="group overflow-hidden rounded-xl border border-[#222220]/15 bg-[#F9F7F1]/80 shadow-md hover:border-[#C79A3C]/40 hover:shadow-xl transition-all duration-300 mb-4">
-                <div className="overflow-hidden bg-[#F5F2EB]">
+              {/* Cover Art Frame with Max Height Constraint */}
+              <div className="group overflow-hidden rounded-xl border border-[#222220]/15 bg-[#F9F7F1]/80 shadow-md hover:border-[#C79A3C]/40 hover:shadow-xl transition-all duration-300 mb-5">
+                <div className="overflow-hidden bg-[#F5F2EB] max-h-[340px] md:max-h-[380px] flex items-center justify-center">
                   <img
                     src="/img/project-dhoomdhaam.jpg"
                     alt="Dhoom Dhaam E-Commerce Website poster showcasing store layout, feature highlights, and tech stack"
-                    className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
                   />
                 </div>
                 <div className="px-4 py-2 bg-[#FAF8F3] border-t border-[#222220]/10 flex items-center justify-between text-[11px] font-mono text-[#222220]/70">
@@ -46,7 +46,7 @@ export function Projects() {
               </h3>
 
               <p className="editorial-description">
-                Designed and built a fast, single-page storefront for a small Pakistani birthday party accessories business, replacing a traditional checkout flow with a zero-backend WhatsApp ordering system tailored to how small local retailers actually operate. Built a fully componentized product catalog and shopping cart using React state, compiling orders via WhatsApp&apos;s Click-to-Chat API into a formatted message pipeline.
+                Designed and built a fast, single-page storefront for a small Pakistani birthday party accessories business, replacing a traditional checkout flow with a zero-backend WhatsApp ordering system tailored to how small local retailers operating. Built a fully componentized product catalog and shopping cart using React state, compiling orders via WhatsApp&apos;s Click-to-Chat API into a formatted message pipeline.
               </p>
 
               <div className="editorial-tech-stack">
@@ -78,8 +78,8 @@ export function Projects() {
             </div>
 
             <div className="editorial-main-col w-full">
-              {/* Browser Window Chrome Container */}
-              <div className="group overflow-hidden rounded-xl border border-[#222220]/20 bg-[#121316] shadow-lg hover:border-[#C79A3C]/50 transition-all duration-300 mb-4">
+              {/* Browser Window Chrome Container with Max Height */}
+              <div className="group overflow-hidden rounded-xl border border-[#222220]/20 bg-[#121316] shadow-lg hover:border-[#C79A3C]/50 transition-all duration-300 mb-5">
                 {/* Window Chrome Header */}
                 <div className="px-4 py-2.5 bg-[#1C1D22] border-b border-white/10 flex items-center justify-between">
                   <div className="flex items-center space-x-2">
@@ -94,12 +94,12 @@ export function Projects() {
                     Live UI
                   </span>
                 </div>
-                {/* Screenshot */}
-                <div className="overflow-hidden bg-[#0A0B0E]">
+                {/* Screenshot with Max Height */}
+                <div className="overflow-hidden bg-[#0A0B0E] max-h-[340px] md:max-h-[380px] flex items-center justify-center">
                   <img
                     src="/img/project-affinity.jpg"
                     alt="Affinity AI Chat Clone Interface showing conversational prompt cards and prompt bar"
-                    className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
                   />
                 </div>
                 {/* Caption Bar */}
@@ -145,118 +145,124 @@ export function Projects() {
             </div>
           </div>
 
-          {/* Matched Pair Section Header */}
-          <div className="pt-4 pb-2 border-t border-[#222220]/15">
-            <span className="editorial-eyebrow text-xs">C++ / SFML ARCADE ENGINE SUITE</span>
-          </div>
-
-          {/* Projects 03 & 04: Matched Pair Grid (Metal Slug & TumblePop) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Project 03: Metal Slug */}
-            <div className="editorial-item flex flex-col h-full border border-[#222220]/15 rounded-xl p-5 bg-[#FAF8F3]/60 hover:bg-[#FAF8F3] hover:border-[#C79A3C]/40 transition-all duration-300">
-              <div className="editorial-margin-col mb-3">
-                <span className="editorial-numeral">03</span>
-                <span className="editorial-date">C++ / SFML</span>
-                <span className="editorial-tag-rust">Action Game</span>
-              </div>
-
-              <div className="editorial-main-col flex-1 flex flex-col justify-between">
-                <div>
-                  {/* Poster Frame */}
-                  <div className="group overflow-hidden rounded-lg border border-[#222220]/20 bg-[#1D1B17] shadow-md mb-4">
-                    <img
-                      src="/img/arcade-metalslug.jpg"
-                      alt="Metal Slug 2D Arcade Game cover poster showing OOP architecture details and gameplay art"
-                      className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                    />
-                    <div className="px-3 py-1.5 bg-[#14120E] border-t border-white/10 text-[10px] font-mono text-[#C79A3C] flex items-center justify-between">
-                      <span>FIG. 03 — METAL SLUG CLONE</span>
-                      <span>OOP ARCHITECTURE</span>
-                    </div>
-                  </div>
-
-                  <h3 className="editorial-heading text-lg">
-                    Metal Slug — 2D Side-Scrolling Action Game
-                  </h3>
-
-                  <p className="editorial-description text-xs leading-relaxed mt-2">
-                    Developed a 2D side-scrolling action game in C++ with SFML. Applied key OOP patterns to structure player physics, enemy AI states, projectile hitboxes, and multi-phase boss fight sequences.
-                  </p>
-                </div>
-
-                <div>
-                  <div className="editorial-tech-stack mt-4">
-                    <span className="editorial-tech-tag"># C++</span>
-                    <span className="editorial-tech-tag"># SFML</span>
-                    <span className="editorial-tech-tag"># Game Physics</span>
-                    <span className="editorial-tech-tag"># Hitbox Systems</span>
-                  </div>
-
-                  <div className="mt-4">
-                    <a
-                      href="https://github.com/affankhan29"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="editorial-link text-xs"
-                    >
-                      View GitHub repository ↗
-                    </a>
-                  </div>
-                </div>
-              </div>
+          {/* Project 03: Metal Slug */}
+          <div className="editorial-item flex flex-col md:flex-row gap-6">
+            <div className="editorial-margin-col shrink-0">
+              <span className="editorial-numeral">03</span>
+              <span className="editorial-date">C++ / SFML</span>
+              <span className="editorial-tag-rust">Action Game</span>
             </div>
 
-            {/* Project 04: TumblePop */}
-            <div className="editorial-item flex flex-col h-full border border-[#222220]/15 rounded-xl p-5 bg-[#FAF8F3]/60 hover:bg-[#FAF8F3] hover:border-[#C79A3C]/40 transition-all duration-300">
-              <div className="editorial-margin-col mb-3">
-                <span className="editorial-numeral">04</span>
-                <span className="editorial-date">C++ / SFML</span>
-                <span className="editorial-tag-rust">Arcade Game</span>
+            <div className="editorial-main-col w-full">
+              {/* Poster Frame with Max Height */}
+              <div className="group overflow-hidden rounded-xl border border-[#222220]/20 bg-[#1D1B17] shadow-md hover:border-[#C79A3C]/40 transition-all duration-300 mb-5">
+                <div className="overflow-hidden bg-[#1D1B17] max-h-[340px] md:max-h-[380px] flex items-center justify-center">
+                  <img
+                    src="/img/arcade-metalslug.jpg"
+                    alt="Metal Slug 2D Arcade Game cover poster showing OOP architecture details and gameplay art"
+                    className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-transform duration-500"
+                  />
+                </div>
+                <div className="px-4 py-2 bg-[#14120E] border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-[#C79A3C]">
+                  <span>FIG. 03 — METAL SLUG CLONE &amp; OOP ARCHITECTURE</span>
+                  <span className="hidden sm:inline-block text-white/60">C++ / SFML Game Physics</span>
+                </div>
               </div>
 
-              <div className="editorial-main-col flex-1 flex flex-col justify-between">
-                <div>
-                  {/* Poster Frame */}
-                  <div className="group overflow-hidden rounded-lg border border-[#222220]/20 bg-[#0B172A] shadow-md mb-4">
-                    <img
-                      src="/img/arcade-tumblepop.jpg"
-                      alt="TumblePop 2D Arcade Game cover poster showing gameplay screenshot and feature matrix"
-                      className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                    />
-                    <div className="px-3 py-1.5 bg-[#070E1A] border-t border-white/10 text-[10px] font-mono text-[#C79A3C] flex items-center justify-between">
-                      <span>FIG. 04 — TUMBLEPOP RECREATION</span>
-                      <span>RETRO ARCADE ENGINE</span>
-                    </div>
-                  </div>
+              <h3 className="editorial-heading">
+                Metal Slug — 2D Side-Scrolling Action Game
+              </h3>
 
-                  <h3 className="editorial-heading text-lg">
-                    TumblePop — 2D Arcade Game Recreation
-                  </h3>
+              <ul className="editorial-description list-disc pl-5 space-y-1.5 text-sm">
+                <li>
+                  Developed a 2D side-scrolling action game inspired by Metal Slug, built entirely in C++ with SFML graphics library.
+                </li>
+                <li>
+                  Applied object-oriented programming design patterns to structure player mechanics, enemy AI behavior states, projectile hitboxes, and multi-phase boss fight sequences.
+                </li>
+                <li>
+                  Engineered custom collision detection, sprite animation loops, and stage progression logic from scratch.
+                </li>
+              </ul>
 
-                  <p className="editorial-description text-xs leading-relaxed mt-2">
-                    Recreated the classic TumblePop arcade shooter-puzzle game in C++ and SFML. Built custom vacuum-mechanics, enemy bubble capture logic, sprite animation loops, and stage progression systems.
-                  </p>
+              <div className="editorial-tech-stack">
+                <span className="editorial-tech-tag"># C++</span>
+                <span className="editorial-tech-tag"># SFML</span>
+                <span className="editorial-tech-tag"># OOP Architecture</span>
+                <span className="editorial-tech-tag"># Hitbox Systems</span>
+                <span className="editorial-tech-tag"># Boss AI Sequences</span>
+              </div>
+
+              <div className="mt-4">
+                <a
+                  href="https://github.com/affankhan29"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="editorial-link"
+                >
+                  View GitHub repository ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 04: TumblePop */}
+          <div className="editorial-item flex flex-col md:flex-row gap-6">
+            <div className="editorial-margin-col shrink-0">
+              <span className="editorial-numeral">04</span>
+              <span className="editorial-date">C++ / SFML</span>
+              <span className="editorial-tag-rust">Arcade Game</span>
+            </div>
+
+            <div className="editorial-main-col w-full">
+              {/* Poster Frame with Max Height */}
+              <div className="group overflow-hidden rounded-xl border border-[#222220]/20 bg-[#0B172A] shadow-md hover:border-[#C79A3C]/40 transition-all duration-300 mb-5">
+                <div className="overflow-hidden bg-[#0B172A] max-h-[340px] md:max-h-[380px] flex items-center justify-center">
+                  <img
+                    src="/img/arcade-tumblepop.jpg"
+                    alt="TumblePop 2D Arcade Game cover poster showing gameplay screenshot and feature matrix"
+                    className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-transform duration-500"
+                  />
                 </div>
-
-                <div>
-                  <div className="editorial-tech-stack mt-4">
-                    <span className="editorial-tech-tag"># C++</span>
-                    <span className="editorial-tech-tag"># SFML</span>
-                    <span className="editorial-tech-tag"># OOP Architecture</span>
-                    <span className="editorial-tech-tag"># Collision Logic</span>
-                  </div>
-
-                  <div className="mt-4">
-                    <a
-                      href="https://github.com/affankhan29"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="editorial-link text-xs"
-                    >
-                      View GitHub repository ↗
-                    </a>
-                  </div>
+                <div className="px-4 py-2 bg-[#070E1A] border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-[#C79A3C]">
+                  <span>FIG. 04 — TUMBLEPOP RECREATION &amp; RETRO ARCADE ENGINE</span>
+                  <span className="hidden sm:inline-block text-white/60">C++ / SFML Shooter-Puzzle</span>
                 </div>
+              </div>
+
+              <h3 className="editorial-heading">
+                TumblePop — 2D Arcade Game Recreation
+              </h3>
+
+              <ul className="editorial-description list-disc pl-5 space-y-1.5 text-sm">
+                <li>
+                  Recreated the classic TumblePop arcade shooter-puzzle game using C++ and SFML applying object-oriented programming principles.
+                </li>
+                <li>
+                  Designed class hierarchies for game entities (player, enemies, bubbles) using polymorphism and encapsulation for modular, maintainable code.
+                </li>
+                <li>
+                  Built custom vacuum-mechanics, enemy bubble capture logic, sprite animation loops, and stage progression systems.
+                </li>
+              </ul>
+
+              <div className="editorial-tech-stack">
+                <span className="editorial-tech-tag"># C++</span>
+                <span className="editorial-tech-tag"># SFML</span>
+                <span className="editorial-tech-tag"># OOP Architecture</span>
+                <span className="editorial-tech-tag"># Collision Logic</span>
+                <span className="editorial-tech-tag"># Sprite Animation</span>
+              </div>
+
+              <div className="mt-4">
+                <a
+                  href="https://github.com/affankhan29"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="editorial-link"
+                >
+                  View GitHub repository ↗
+                </a>
               </div>
             </div>
           </div>
