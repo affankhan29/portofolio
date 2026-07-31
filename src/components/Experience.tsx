@@ -26,7 +26,14 @@ export function Experience() {
             </div>
 
             <div className="editorial-main-col">
-              <h3 className="editorial-heading">Deister Software Pakistan</h3>
+              <div className="flex items-center gap-3 mb-1">
+                <img
+                  src="/img/logo-deister.svg"
+                  alt="Deister Software logo"
+                  className="h-7 w-auto object-contain grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                />
+                <h3 className="editorial-heading mb-0">Deister Software Pakistan</h3>
+              </div>
               <p className="editorial-subtitle">Software Development Engineer Intern</p>
               
               <p className="editorial-description">
@@ -51,7 +58,14 @@ export function Experience() {
             </div>
 
             <div className="editorial-main-col">
-              <h3 className="editorial-heading">Pehli Kiran School System</h3>
+              <div className="flex items-center gap-3 mb-1">
+                <img
+                  src="/img/logo-pehlikiran.jpg"
+                  alt="Pehli Kiran School System logo"
+                  className="h-7 w-auto object-contain grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300 rounded"
+                />
+                <h3 className="editorial-heading mb-0">Pehli Kiran School System</h3>
+              </div>
               <p className="editorial-subtitle">Community Service Volunteer &amp; Tech Instructor</p>
 
               <p className="editorial-description">

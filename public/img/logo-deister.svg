@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <rect width="40" height="40" y="5" rx="8" fill="#003366"/>
+  <path d="M12 15H24C27.3137 15 30 17.6863 30 21V29C30 32.3137 27.3137 35 24 35H12V15Z" stroke="#00A896" stroke-width="4"/>
+  <path d="M18 21H23C24.1046 21 25 21.8954 25 23V27C25 28.1046 24.1046 29 23 29H18V21Z" fill="#00A896"/>
+  <text x="50" y="32" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="20" fill="#222220" letter-spacing="-0.5">deister</text>
+  <text x="130" y="32" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="12" fill="#8C3B2E" letter-spacing="0.5">SOFTWARE</text>
+</svg>
