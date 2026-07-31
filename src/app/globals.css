@@ -7,6 +7,19 @@
   --color-rust: #8C3B2E;
   --color-hairline: #E4DAC4;
   --color-muted: #6B6559;
+  --color-card-bg: rgba(250, 247, 240, 0.94);
+  --color-nav-bg: rgba(250, 247, 240, 0.96);
+}
+
+html.dark {
+  --color-paper: #121211;
+  --color-ink: #F3EFE6;
+  --color-mustard: #E5B84F;
+  --color-rust: #E06C53;
+  --color-hairline: #2E2D2A;
+  --color-muted: #A8A296;
+  --color-card-bg: rgba(24, 24, 22, 0.94);
+  --color-nav-bg: rgba(18, 18, 17, 0.96);
 }
 
 * {
@@ -102,10 +115,31 @@ body {
   right: 0;
   z-index: 1000;
   width: 100%;
-  background: rgba(250, 247, 240, 0.96);
+  background: var(--color-nav-bg);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-hairline);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.theme-toggle-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-hairline);
+  padding: 6px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--color-mustard);
+  color: var(--color-mustard);
 }
 
 .nav-container {
@@ -207,7 +241,7 @@ body {
   display: inline-block;
   letter-spacing: 0.02em;
   padding: 4px 14px;
-  background: rgba(250, 247, 240, 0.92);
+  background: var(--color-card-bg);
   backdrop-filter: blur(6px);
   border: 1px solid var(--color-hairline);
   border-radius: 2px;
@@ -224,7 +258,7 @@ body {
   line-height: 1.15;
   display: inline-block;
   padding: 10px 24px;
-  background: rgba(250, 247, 240, 0.94);
+  background: var(--color-card-bg);
   backdrop-filter: blur(6px);
   border: 1px solid var(--color-hairline);
   border-radius: 2px;
@@ -255,7 +289,7 @@ body {
   text-transform: uppercase;
   display: inline-block;
   padding: 4px 14px;
-  background: rgba(250, 247, 240, 0.92);
+  background: var(--color-card-bg);
   backdrop-filter: blur(6px);
   border: 1px solid var(--color-hairline);
   border-radius: 2px;
@@ -271,7 +305,7 @@ body {
   margin-bottom: 24px;
   display: inline-block;
   padding: 12px 28px;
-  background: rgba(250, 247, 240, 0.94);
+  background: var(--color-card-bg);
   backdrop-filter: blur(6px);
   border: 1px solid var(--color-hairline);
   border-radius: 2px;
@@ -287,7 +321,7 @@ body {
   margin-bottom: 40px;
   line-height: 1.5;
   padding: 16px 24px;
-  background: rgba(250, 247, 240, 0.92);
+  background: var(--color-card-bg);
   backdrop-filter: blur(6px);
   border: 1px solid var(--color-hairline);
   border-radius: 2px;
@@ -328,7 +362,7 @@ body {
 
 .btn-secondary {
   font-family: 'Inter', sans-serif;
-  background-color: rgba(250, 247, 240, 0.92);
+  background-color: var(--color-card-bg);
   color: var(--color-ink);
   border: 1px solid var(--color-hairline);
   padding: 12px 28px;
@@ -390,7 +424,7 @@ body {
   color: var(--color-rust);
   border-left: 2px solid var(--color-mustard);
   padding: 16px 24px;
-  background: rgba(250, 247, 240, 0.92);
+  background: var(--color-card-bg);
   backdrop-filter: blur(6px);
   border-radius: 0 2px 2px 0;
 }
@@ -402,7 +436,7 @@ body {
   color: var(--color-ink);
   max-width: 68ch;
   padding: 24px;
-  background: rgba(250, 247, 240, 0.94);
+  background: var(--color-card-bg);
   backdrop-filter: blur(6px);
   border: 1px solid var(--color-hairline);
   border-radius: 2px;
@@ -421,7 +455,7 @@ body {
   padding: 40px 24px;
   border-bottom: 1px solid var(--color-hairline);
   align-items: start;
-  background: rgba(250, 247, 240, 0.94);
+  background: var(--color-card-bg);
   backdrop-filter: blur(6px);
   margin-bottom: 16px;
   border: 1px solid var(--color-hairline);
@@ -546,7 +580,7 @@ body {
 }
 
 .filter-btn {
-  background: rgba(250, 247, 240, 0.94);
+  background: var(--color-card-bg);
   border: 1px solid var(--color-hairline);
   color: var(--color-muted);
   padding: 8px 24px;
@@ -584,7 +618,7 @@ body {
 
 .skill-card {
   height: 125px;
-  background: rgba(250, 247, 240, 0.94);
+  background: var(--color-card-bg);
   backdrop-filter: blur(4px);
   border-radius: 2px;
   display: flex;
@@ -663,7 +697,7 @@ body {
   align-items: center;
   gap: 16px;
   padding: 20px 24px;
-  background: rgba(250, 247, 240, 0.94);
+  background: var(--color-card-bg);
   backdrop-filter: blur(4px);
   border: 1px solid var(--color-hairline);
   border-radius: 2px;
@@ -703,7 +737,7 @@ body {
   border-top: 1px solid var(--color-hairline);
   padding: 40px 24px;
   max-width: 750px;
-  background: rgba(250, 247, 240, 0.94);
+  background: var(--color-card-bg);
   backdrop-filter: blur(4px);
   border: 1px solid var(--color-hairline);
   border-radius: 2px;
@@ -761,7 +795,7 @@ body {
   gap: 20px;
   position: relative;
   z-index: 10;
-  background: rgba(250, 247, 240, 0.96);
+  background: var(--color-nav-bg);
 }
 
 .footer-tagline {
